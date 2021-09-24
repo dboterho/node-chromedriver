@@ -26,7 +26,7 @@ let force_download = process.env.npm_config_chromedriver_force_download === 'tru
     options.force_download = "true";
   }
 
-  if (detect_chromedriver_version !== 'true') {
+  if (detect_chromedriver_version === 'true') {
     if (chromedriver_version === 'LATEST') {
       chromedriver_version = await utils.getChromeDriverVersionFromUrl(`${cdnUrl}/LATEST_RELEASE`);
     } else {
